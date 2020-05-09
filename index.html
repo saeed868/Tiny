@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rk Platform</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.css">
+<script src="https://kit.fontawesome.com/309468801a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="sidebar">
+		<div class="sidebar-top">
+			<div class="sidebar-top-logo">
+				<p>¯\_(ツ)_/¯</p>
+			</div>
+			<div class="side-user-info">
+				<div class="side-user-info-avatar">
+					<img src="src/img/avatar.jpg" alt="avatar" />
+				</div>
+				<h3>Alireza Bazargan</h3>
+				<p>Webmaster of Tiny</p>
+			</div>
+		</div>
+		<div class="sidebar-bottom">
+			<div id="side-nav" class="sidebar-navigation">
+				<ul>
+					<a href="#"><li class=""><i class="fas fa-home"></i><span>Home</span></li></a>
+					<a href="#"><li><i class="fas fa-columns"></i><span>Dashboard</span></li></a>
+					<a href="#"><li class="active"><i class="fas fa-users"></i><span>Users</span></li></a>
+					<a href="#"><li><i class="fas fa-link"></i><span>Tiny Links</span></li></a>
+					<a href="#"><li><i class="fas fa-cogs"></i><span>Settings</span></li></a>
+				</ul>
+				<div class="side-button">
+					<i class="fas fa-arrow-left side-open" onClick="sidebar_open()"></i>
+					<i class="fas fa-arrow-right side-close" onClick="sidebar_close()"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main-header">
+		</div>
+		<div class="main-header-bottom">
+			<div class="title">
+				<h2>Dashboard</h2>
+				<p>Summery of the site</p>
+			</div>
+		</div>
+		<div class="main-content-wrap">
+			<div class="main-content">
+				<div class="table-wrap">
+					<table>
+						<thead>
+							<tr onClick="">
+								<th>#ID</th>
+								<th>Email</th>
+								<th>Name</th>
+								<th>Membeship</th>
+								<th>Registration Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1011</td>
+								<td>Alireza@gmail.com</td>
+								<td>Alireza Bazargan</td>
+								<td>Super User</td>
+								<td>Unlimited</td>
+							</tr>
+							<tr>
+								<td>1012</td>
+								<td>mamand007@gmail.com</td>
+								<td>Mohammad Hosseini</td>
+								<td>Free</td>
+								<td>2020/10/05</td>
+							</tr>
+							<tr>
+								<td>1013</td>
+								<td>rezapashmakian@gmail.com</td>
+								<td>Reza Abbasi</td>
+								<td>Premium</td>
+								<td>2020/12/20</td>
+							</tr>
+							<tr>
+								<td>1014</td>
+								<td>kamiaremami@gmail.com</td>
+								<td>Kamiar Emami></td>
+								<td>Premium</td>
+								<td>2021/08/30</td>
+							</tr>
+							<tr>
+								<td>1015</td>
+								<td>SamanFattahi@gmail.com</td>
+								<td>Saman Fattahi</td>
+								<td>Premium</td>
+								<td>2023/04/10</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="4"></td>
+								<td>2020/05/20</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function sidebar_close(){
+	document.getElementById("sidebar").style.flex = "0 0 100px";
+	document.getElementById("side-nav").classList.add("short");
+	document.getElementsByClassName("sidebar-top")[0].style.display = "none";
+	document.getElementsByClassName("sidebar-bottom")[0].style.margin = "250px 0px 0px 0px";
+	document.getElementsByClassName("side-open")[0].style.display = "block";
+	document.getElementsByClassName("side-close")[0].style.display = "none";
+}
+	
+function sidebar_open(){
+	document.getElementById("sidebar").style.flex = "0 0 250px";
+	document.getElementById("side-nav").classList.remove("short");
+	document.getElementsByClassName("sidebar-bottom")[0].style.margin = "0px 0px 0px 0px";
+	document.getElementsByClassName("sidebar-top")[0].style.display = "block";
+	
+	document.getElementsByClassName("side-close")[0].style.display = "block";
+	document.getElementsByClassName("side-open")[0].style.display = "none";
+}
+</script>
+</body>
+</html>

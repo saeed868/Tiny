@@ -1,0 +1,313 @@
+/* CSS Document */
+@import "src/fonts/roboto/import.css";
+@import "src/fonts/sofia-pro/sofiapro.css";
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+a{text-decoration: none;}
+
+a,p,h1,h2,h3,h4,span{
+	font-family: "roboto";
+	font-style: normal;
+	font-weight: normal;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * 3
+ * IE 6/7 only
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+
+
+body , html{
+	width: 100%; height: 100%;
+	background: #1F1F1F;
+}
+
+:root {
+	--color1: #2c3040;
+	--color2: #252936;
+	--color3: #183baf;
+/*
+	--color1: #ff5959;
+	--color2: #17161c;
+*/
+	
+/*
+	--color1: #eff0f8;
+	--color2: #ffffff;
+*/
+}
+
+
+/**** Let's Start ****/
+
+
+body{
+	background: var(--color1);
+}
+
+#wrapper{
+	width: 100%; height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+/*          Side Bar          */
+#sidebar{
+	background: var(--color2);
+	width: 250px; height: 100%;
+	flex: 0 0 250px;
+	
+	transition: all 0.3s;
+}
+
+#sidebar div{
+	width: 100%;
+}
+
+.sidebar-top{
+	
+}
+
+.sidebar-top-logo{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.sidebar-top-logo img{
+	width: 150px;
+}
+.sidebar-top-logo p{
+	color: #fefefe;
+	font-size: 32px;
+}
+
+
+.side-user-info{
+	text-align: center;
+	color: #fefefe;
+	margin-top: 25px;
+}
+
+.side-user-info-avatar{
+	width: 100%;
+}
+
+.side-user-info-avatar img{
+	width: 120px;
+	border:3px solid rgba(255,255,255,0.85);
+	border-radius: 120px;
+}
+
+.side-user-info h3{
+	font-family: 'Sofia Pro';
+    font-weight: 600;
+    font-style: normal;
+	font-size: 22px;
+}
+
+.side-user-info p{
+	font-family: 'Sofia Pro';
+    font-weight: 100;
+    font-style: normal;
+	font-size: 18px;
+}
+
+
+.sidebar-bottom{
+	padding-top: 25px;
+}
+
+.sidebar-navigation ul{
+	width: 100%;
+	list-style-type: none;
+	list-style: none;
+}
+
+.sidebar-navigation ul a li{
+	width: 100%; height: 50px;
+	padding-left: 30px;
+	padding-top: 14px;
+	
+	font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-style: normal;
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+	
+	text-align: left;
+	
+	transition: all 0.3s;
+}
+
+.sidebar-navigation ul a li.active{
+/*	background: rgba(255,255,255,0.15);*/
+	border-left: 3px solid rgba(255,255,255,1);
+	padding-left: 27px;
+}
+
+.sidebar-navigation ul a li:hover{
+	background: rgba(255,255,255,0.25);
+}
+
+
+.sidebar-navigation ul a li i{
+	margin-right: 7px; 
+}
+
+.side-button{
+	width: 100%;
+	padding: 50px 0px;
+
+	text-align: center;
+}
+
+.side-button i{
+	font-size: 24px;
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+.side-close {
+    display: none;
+}
+document.getElementsByClassName("side-close")[0].style.display = "none";
+
+.short ul a li{
+	text-align: center;
+	padding: 14px 30px;
+}
+
+.short ul a li span{
+	display: none;
+}
+
+.short ul a li i{
+	font-size: 20px;
+}
+
+/*          Main          */
+#main{
+	background: #1e1d25;
+	height: 100%;
+	flex: 1 0;
+}
+
+
+.main-header{
+	width: 100%; height: 60px;
+}
+
+.main-header-bottom{
+	width: 100%; height: 60px;
+	padding-left: 50px;
+}
+
+.main-header-bottom .title{
+	
+}
+
+.title h2{
+	font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-style: normal;
+	font-size: 22px;
+	color: rgba(255,255,255,1);
+}
+
+.title p{
+	font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-style: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+
+
+
+.main-content-wrap{
+	width: 100%;
+	padding: 25px;
+}
+
+.main-content{
+	background: var(--color2);
+	width: 100%;
+	padding: 50px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+
+
+.table-wrap{
+	width: 100%;
+}
+
+.table-wrap table{
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	font-family: 'Sofia Pro';
+    font-weight: 400;
+    font-style: normal;
+	font-size: 16px;
+	color: rgba(255,255,255,0.75);
+	text-align: center;
+	
+	border-collapse: collapse;
+}
+
+.table-wrap table thead{
+	border-bottom: 1px solid rgba(144, 144, 144, 0.75);
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.table-wrap table tbody tr{
+	border-bottom:1px solid rgba(144, 144, 144, 0.25);
+	cursor: pointer;
+	
+	transition: all 0.3s
+}
+
+
+
+.table-wrap table tbody tr:nth-child(2n+1) {
+    background-color: rgba(144, 144, 144, 0.075);
+}
+.table-wrap table tbody tr {
+    border-color: rgba(144, 144, 144, 0.25);
+}
+.table-wrap table tbody tr:hover{
+	background: rgba(144, 144, 144, 0.15);
+}
+.table-wrap table td{
+	padding: 13px;
+	vertical-align: baseline;
+}
+
+
+
+
+
+
+
